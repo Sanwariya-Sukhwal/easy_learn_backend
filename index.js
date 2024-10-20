@@ -10,7 +10,11 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+{    origin : 'https://easylearn85.netlify.app/',
+    methods:["GET", "POST", "PUT", "DELETE"],
+    credentials:true,
+}));
 app.use(express.json());
 dotenv.config();
 
